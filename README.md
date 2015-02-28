@@ -1,0 +1,1 @@
+This repository is a collection of projects I am completing as I got through the book Operating Systems Concepts. They are all written in C and demonstration some OS level concept. Each directory represents a different project. Most of these projects are labeled in the "Project" section at the end of each chapter.
