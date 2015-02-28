@@ -1,0 +1,1 @@
+This script is a very very simple version of the "cp" shell utility.
