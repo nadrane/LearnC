@@ -1,2 +1,9 @@
+# Ignore everything
 *
+
+# Unignore everything with an extension
 !*.*
+
+# Unignore makeifles
+!makefile
+!Makefile
