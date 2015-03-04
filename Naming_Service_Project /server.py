@@ -45,7 +45,7 @@ def run_server():
         # Iterate only over threads that are still running.
         # Threads can shut themselves down without notifying the parent again (when close to sent).
         # We don't need to trying closing the sockets associated with those threads a second time.
-        for thread in filter(lambda x: x.stopped, thread_list):
+        for thread in filter(lambda x: not x.stopped(), thread_list):
             thread.terminate()
         server_socket.close()
         return
