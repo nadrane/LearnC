@@ -53,6 +53,10 @@ def run_server():
     # Set the signal handler for 
     signal.signal(signal.SIGINT, clean_up)
 
+    # Reuse sockets that are in the TIME_WAIT state. This setting lets us rapidly shutdown the program and restart it.
+    # http://serverfault.com/questions/329845/how-to-forcibly-close-a-socket-in-time-wait
+    server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+
     # bind the socket to a public host, and a well-known port
     server_socket.bind(('127.0.0.1', 8000)) 
     # become a server socket
